@@ -39,7 +39,7 @@ function drawTaiwan(){
             fill = $(this).attr("fill");
             $(this).attr("fill", '#116493');
             $('#title').html($(this).attr("name"));      
-            // $('#panel').css({"height": "20px","width": "50px"});
+            $('#panel').css({"height": "20px","width": "50px"});
            }).on("mouseout", function() {
              $(this).attr("fill", fill);
           });
