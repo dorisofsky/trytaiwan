@@ -22,7 +22,7 @@ function drawTaiwan(){
           fill:'#55AA00',
           stroke: '#E0FBE7'
         });
-/*
+
         d3.select("#pathCanvas").append("path")         //縣市/行政區界線
           .datum(topojson.mesh(topodata, topodata.objects[type], function(a, b) { return a !== b ; }))
           .attr("d", path)
@@ -34,7 +34,7 @@ function drawTaiwan(){
             stroke-dasharray: 2,2;
             stroke-linejoin: round;
           }
-*/
+
         d3.select("svg").selectAll("path").on("mouseenter", function() {          // title div 顯示滑鼠所指向的縣市/行政區
             fill = $(this).attr("fill");
             $(this).attr("fill", '#116493');
