@@ -5,8 +5,6 @@ $(document).ready(function() {
 
 function drawTaiwan(){
 
-
-
      d3.json(" http://dorisofsky.github.io/taiwan_realtime2/county.json", function(topodata) {
       //改掉json為自己推播的json網址
         var features = topojson.feature(topodata, topodata.objects.county).features;
@@ -45,14 +43,14 @@ function drawTaiwan(){
            }).on("mouseout", function() {
              $(this).attr("fill", fill);
           });
-/*
+
         $("path").mouseover(function(){                   //panel 區塊跟隨滑鼠移動
           $("path").mousemove( function(e) {
            mouseX = e.pageX; 
            mouseY = e.pageY;
           });  
           $('#panel').css({'top':mouseY,'left':mouseX}).fadeIn('slow');
-        });*/
+        });
 
       });
 };
