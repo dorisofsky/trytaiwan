@@ -11,7 +11,18 @@
 	<script type="text/javascript" src="trytaiwan.js"></script>
 	<style>
 	@media (min-width: 1800px) {
+		#map{
+
+			position:relative;
+
+			width:700px;
+			height:50%;
+			top:-150px;
+			margin:auto;
+			
+			border-radius: 5px;
 		
+		}
 		svg{
 			width:1000px;
 			height:1100px;
@@ -42,7 +53,19 @@
 		}
 	}
 	@media (max-width: 1500px) {  
+		#map{
+
+			position:relative;
+
+			width:700px;
+			height:50%;
+			top:-150px;
+			left:80px;
+			margin:auto;
+			
+			border-radius: 5px;
 		
+		}
 		svg{
 			width:800px;
 			height:900px;
@@ -71,7 +94,12 @@
 			color:#fff;
 			padding:10px;
 		}
-		
+		.wrapper > .header{
+			position:relative;
+			margin:-480px auto;
+			width:600px;
+			z-index:2;
+		}
 	}
 
 	</style>
@@ -81,6 +109,10 @@
 	<div id='panel' style="display:none">
 		<span id='title'></span><br/>
 	</div>
+	
+	<div class="panel">
+		<p></p>
+	</div>	
 	
 
 </body>
