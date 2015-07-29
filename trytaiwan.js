@@ -1,10 +1,5 @@
 $(document).ready(function() {
-
-
-
-drawTaiwan()
-
-  
+  drawTaiwan()
 });
 
 
@@ -60,3 +55,4 @@ function drawTaiwan(){
         });*/
 
       });
+};
