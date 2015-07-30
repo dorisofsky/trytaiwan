@@ -20,10 +20,10 @@ function drawTaiwan(){
               return d.properties.C_Name;
           },
           fill:'#55AA00',
-          // stroke: '#E0FBE7'
+          stroke: '#E0FBE7'
         });
 /*
-        d3.select("#pathCanvas").append("path")         //縣市/行政區界線
+        d3.select("#pathCanvas").append("path")         //縣市/行政區界線>>一直失敗不知為何，所以放棄了。
           .datum(topojson.mesh(topodata, topodata.objects[type], function(a, b) { return a !== b ; }))
           .attr("d", path)
           .attr("id", "county-boundary");
