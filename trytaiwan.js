@@ -20,7 +20,7 @@ function drawTaiwan(){
               return d.properties.C_Name;
           },
           fill:'#55AA00',
-          stroke: '#E0FBE7'
+          // stroke: '#E0FBE7'
         });
 
         d3.select("#pathCanvas").append("path")         //縣市/行政區界線
