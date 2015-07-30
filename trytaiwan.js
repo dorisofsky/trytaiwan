@@ -45,5 +45,13 @@ function drawTaiwan(){
           $('#panel').css({'top':mouseY,'left':mouseX}).fadeIn('slow');
         });
 
+        $("path").mouseout(function(){                   //panel 區塊跟隨滑鼠移動
+          $("path").mousemove( function(e) {
+           mouseX = e.pageX; 
+           mouseY = e.pageY;
+          });  
+          $('#panel').css({'top':mouseY,'left':mouseX}).fadeIn('slow');
+        });
+
       });
 };
