@@ -58,7 +58,7 @@ function drawTaiwan(){
              .style("opacity", 0.8);
              div.transition().duration(300)
              .style("opacity", 0);
+      });
     });
-
   });
-});
+};
