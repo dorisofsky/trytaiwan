@@ -43,22 +43,40 @@ function drawTaiwan(){
       .attr("id", "county-boundary");
     */
     d3.select("svg").selectAll("path").on("mouseenter", function() {          // title div 顯示滑鼠所指向的縣市/行政區
-        fill = $(this).attr("fill");
-        $(this).attr("fill", '#116493');
-        $('#title').html($(this).attr("name"));      
-        $('#panel').css({"height": "20px","width": "50px"});
-       }).on("mouseout", function() {
-         $(this).attr("fill", fill);
+      fill = $(this).attr("fill");
+      $(this).attr("fill", '#116493');
+      $('#title').html($(this).attr("name"));      
+      $('#panel').css({"height": "20px","width": "50px"});
+       })
+/*    .on("mouseout", function() {
+             $(this).attr("fill", fill);
+          });
+
+        $("path").mouseover(function(){                   //panel 區塊跟隨滑鼠移動
+          $("path").mousemove( function(e) {
+           d3.select(this)
+                 .transition().duration(300)
+                 .style("opacity", 0.8);
+                 div.transition().duration(300)
+                 .style("opacity", 0);
+          });
+        });   */ 
+    .on("mouseout", function() {
+        // $(this).attr("fill", fill);
+        d3.select(this)
+        .transition().duration(300)
+        .style("opacity", 0.8);
+        div.transition().duration(300)
+        .style("opacity", 0);
       });
 
-    $("path").mouseover(function(){                   //panel 區塊跟隨滑鼠移動
-      $("path").mousemove( function(e) {
-       d3.select(this)
-             .transition().duration(300)
-             .style("opacity", 0.8);
-             div.transition().duration(300)
-             .style("opacity", 0);
-      });
+    .on("mouseover",function(){                   //panel 區塊跟隨滑鼠移動
+        d3.select(this).transition().duration(300).style("opacity", 1);
+        div.transition().duration(300)
+        .style("opacity", 1)
+        div.text(d.properties.T_Name+ " ─ 洪災數量：" + d.properties.flood) //+ " : " + rateById[d.TOWN_ID] d.properties.T_Name
+        .style("left", (d3.event.pageX) + "px")
+        .style("top", (d3.event.pageY -30) + "px");
     });
   });
 };
