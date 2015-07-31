@@ -76,7 +76,7 @@ function drawTaiwan(){
         d3.select(this)
         .transition().duration(300)
         .style("opacity", 0.8);
-        /*div*/.transition().duration(300)
+        div.transition().duration(300)
         .style("opacity", 0);
       });
 
