@@ -72,7 +72,7 @@ function drawTaiwan(){
 
     //下面是青恩的
     .on("mouseout", function() {
-        // $(this).attr("fill", fill);
+        $(this).attr("fill", fill);
         d3.select(this)
         .transition().duration(300)
         .style("opacity", 0.8);
