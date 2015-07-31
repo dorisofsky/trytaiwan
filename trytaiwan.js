@@ -11,7 +11,7 @@ function drawTaiwan(){
         // 改掉.["county"]成為.county
        
         var path = d3.geo.path().projection( // 路徑產生器
-          d3.geo.mercator().center([121,24]).scale(8000) // 座標變換函式
+          d3.geo.mercator().center([121,24]).scale(8000).translate([width / 2, height / 2]) // 座標變換函式
          );
 
         d3.select("svg").selectAll("path").data(features).enter().append("path").attr({
