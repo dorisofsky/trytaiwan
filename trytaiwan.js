@@ -60,15 +60,13 @@ function drawTaiwan(){
              $(this).attr("fill", fill);
           });
  
-        $("path").mouseover(function(){                   //panel 區塊跟隨滑鼠移動
-          $("path").mousemove( function(e) {
-           d3.select(this)
-                 .transition().duration(300)
-                 .style("opacity", 0.8);
-                 div.transition().duration(300)
-                 .style("opacity", 0);
-          });
-        });    
+      $("path").mouseover(function(){                   //panel 區塊跟隨滑鼠移動
+        $("path").mousemove( function(e) {
+      -       mouseX = e.pageX; 
+      -       mouseY = e.pageY;
+      -      });  
+      -      $('#panel').css({'top':mouseY,'left':mouseX}).fadeIn('slow'); 
+      });
 /*
     //下面是青恩的
     .on("mouseout", function() {
