@@ -78,7 +78,7 @@ function drawTaiwan(){
         .style("opacity", 0.8);
         div.transition().duration(300)
         .style("opacity", 0);
-      });
+      })
 
     .on("mouseover", function() {                //panel 區塊跟隨滑鼠移動
         $("path").mousemove( function(e) {
