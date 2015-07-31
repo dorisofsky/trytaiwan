@@ -1,0 +1,87 @@
+	@media (min-width: 1800px) {
+		#map{
+
+			position:relative;
+
+			width:700px;
+			height:50%;
+			top:-150px;
+			margin:auto;
+			
+			border-radius: 5px;
+		
+		}
+		svg{
+			width:1000px;
+			height:1100px;
+
+		}
+		path{
+			border:1px solid white;
+		}
+		#county-boundary {
+			  fill: none;
+			  stroke: #fff;
+			  stroke-dasharray: 5,0;
+			  stroke-linejoin: round;
+
+		}
+		#panel{
+			position: absolute;
+			z-index:99;
+			height: 20px;
+			width: 50px;
+			background-color: #fff;
+			-webkit-transition:all .1s;
+			border-radius: 5px;
+			background-color: #000;
+			background-color:rgba(0,0,0,0.3); 
+			color:#fff;
+			padding:10px;
+		}
+	}
+
+	@media (max-width: 1500px) {  
+		#map{
+
+			position:relative;
+
+			width:700px;
+			height:50%;
+			top:-150px;
+			left:80px;
+			margin:auto;
+			
+			border-radius: 5px;
+		
+		}
+		svg{
+			width:800px;
+			height:900px;
+
+		}
+		path{
+			border:1px solid white;
+		}
+		#county-boundary {
+			  fill: none;
+			  stroke: #fff;
+			  stroke-dasharray: 5,0;
+			  stroke-linejoin: round;
+
+		}
+		#panel{
+			position: absolute;
+			z-index:99;
+			height: 20px;
+			width: 50px;
+			background-color: #fff;
+			-webkit-transition:all .1s;
+			border-radius: 5px;
+			background-color: #000;
+			background-color:rgba(0,0,0,0.3); 
+			color:#fff;
+			padding:10px;
+		}
+
+	}
