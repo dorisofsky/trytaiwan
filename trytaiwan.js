@@ -5,14 +5,26 @@ $(document).ready(function() {
 
 function drawTaiwan(){
 
+     var width = 1024;
+     var height = 700;
+
+     var features = topojson.feature(topodata, topodata.objects.county).features;
+     // 改掉.["county"]成為.county
+     
+     /*var path = d3.geo.path().projection( // 路徑產生器
+       d3.geo.mercator().center([121,24]).scale(8000).translate([width / 2, height / 2]) // 座標變換函式
+      );*/ //用下面的東西，把這行分開寫。
+
+     var projection = d3.geo.mercator()
+      .center([121,24])
+      .scale(8000)
+      .translate([width / 2, height / 2]);
+
+     var path = d3.geo.path().projection(projection);
+      
+
      d3.json(" http://dorisofsky.github.io/taiwan_realtime2/county.json", function(topodata) {
       //改掉json為自己推播的json網址
-        var features = topojson.feature(topodata, topodata.objects.county).features;
-        // 改掉.["county"]成為.county
-       
-        var path = d3.geo.path().projection( // 路徑產生器
-          d3.geo.mercator().center([121,24]).scale(8000).translate([width / 2, height / 2]) // 座標變換函式
-         );
 
         d3.select("svg").selectAll("path").data(features).enter().append("path").attr({
           d: path,
