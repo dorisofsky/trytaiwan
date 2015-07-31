@@ -21,7 +21,8 @@ function drawTaiwan(){
 
   var path = d3.geo.path().projection(projection);
 
-/*  var div = d3.select("body").append("div")   
+/*//為了後面的mouseover而貼在這裡，可是不知道有什麼意義。
+  var div = d3.select("body").append("div")   
     .attr("class", "tooltip")               
     .style("opacity", 0);
 
@@ -30,7 +31,7 @@ function drawTaiwan(){
   .attr("height", height)
   .style("margin", "10px auto");*/
 
-  d3.json(" http://dorisofsky.github.io/taiwan_realtime2/county.json", function(topodata) {
+  d3.json(" TWN_TOWN_v2_topo.json", function(topodata) {
   //改掉json為自己推播的json網址
 
     var features = topojson.feature(topodata, topodata.objects.county).features;
@@ -68,7 +69,7 @@ function drawTaiwan(){
             $('#panel').css({'top':mouseY,'left':mouseX}).fadeIn('slow'); 
       });
 /*
-    //下面是青恩的
+    //下面是青恩的，但是基本上跟我的整個檔案不合，應該不是這樣搞的，不要異想天開了。還是用現成的範例去改，比較務實。
     .on("mouseout", function() {
         $(this).attr("fill", fill);
         d3.select(this)
