@@ -56,10 +56,10 @@ function drawTaiwan(){
       $('#title').html($(this).attr("name"));      
       $('#panel').css({"height": "20px","width": "50px"});
        })
-/*    .on("mouseout", function() {
+   .on("mouseout", function() {
              $(this).attr("fill", fill);
           });
-
+/* 
         $("path").mouseover(function(){                   //panel 區塊跟隨滑鼠移動
           $("path").mousemove( function(e) {
            d3.select(this)
@@ -68,7 +68,7 @@ function drawTaiwan(){
                  div.transition().duration(300)
                  .style("opacity", 0);
           });
-        });   */ 
+        });    
 
     //下面是青恩的
     .on("mouseout", function() {
@@ -89,7 +89,7 @@ function drawTaiwan(){
           .style("left", (d3.event.pageX) + "px")
           .style("top", (d3.event.pageY -30) + "px");
         });
-    });
+    });*/
 
   });
 };
