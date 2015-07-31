@@ -21,6 +21,14 @@ function drawTaiwan(){
 
   var path = d3.geo.path().projection(projection);
 
+  var div = d3.select("body").append("div")   
+    .attr("class", "tooltip")               
+    .style("opacity", 0);
+
+   var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .style("margin", "10px auto");
 
   d3.json(" http://dorisofsky.github.io/taiwan_realtime2/county.json", function(topodata) {
   //改掉json為自己推播的json網址
@@ -82,6 +90,6 @@ function drawTaiwan(){
           .style("top", (d3.event.pageY -30) + "px");
         });
     });*/
-    
+
   });
 };
