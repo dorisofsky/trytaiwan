@@ -62,10 +62,10 @@ function drawTaiwan(){
  
       $("path").mouseover(function(){                   //panel 區塊跟隨滑鼠移動
         $("path").mousemove( function(e) {
-      -       mouseX = e.pageX; 
-      -       mouseY = e.pageY;
-      -      });  
-      -      $('#panel').css({'top':mouseY,'left':mouseX}).fadeIn('slow'); 
+             mouseX = e.pageX; 
+             mouseY = e.pageY;
+            });  
+            $('#panel').css({'top':mouseY,'left':mouseX}).fadeIn('slow'); 
       });
 /*
     //下面是青恩的
