@@ -70,13 +70,15 @@ function drawTaiwan(){
         .style("opacity", 0);
       });
 
-    .on("mouseover",function(){                   //panel 區塊跟隨滑鼠移動
-        d3.select(this).transition().duration(300).style("opacity", 1);
-        div.transition().duration(300)
-        .style("opacity", 1)
-        div.text(d.properties.T_Name+ " ─ 洪災數量：" + d.properties.flood) //+ " : " + rateById[d.TOWN_ID] d.properties.T_Name
-        .style("left", (d3.event.pageX) + "px")
-        .style("top", (d3.event.pageY -30) + "px");
+    $("path").mouseover(function(){                   //panel 區塊跟隨滑鼠移動
+        $("path").mousemove( function(e) {
+          d3.select(this).transition().duration(300).style("opacity", 1);
+          div.transition().duration(300)
+          .style("opacity", 1)
+          div.text(d.properties.T_Name+ " ─ 洪災數量：" + d.properties.flood) //+ " : " + rateById[d.TOWN_ID] d.properties.T_Name
+          .style("left", (d3.event.pageX) + "px")
+          .style("top", (d3.event.pageY -30) + "px");
+        });
     });
   });
 };
