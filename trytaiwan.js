@@ -21,14 +21,14 @@ function drawTaiwan(){
 
   var path = d3.geo.path().projection(projection);
 
-  var div = d3.select("body").append("div")   
+/*  var div = d3.select("body").append("div")   
     .attr("class", "tooltip")               
     .style("opacity", 0);
 
   var svg = d3.select("body").append("svg")
   .attr("width", width)
   .attr("height", height)
-  .style("margin", "10px auto");
+  .style("margin", "10px auto");*/
 
   d3.json(" http://dorisofsky.github.io/taiwan_realtime2/county.json", function(topodata) {
   //改掉json為自己推播的json網址
@@ -59,7 +59,7 @@ function drawTaiwan(){
    .on("mouseout", function() {
              $(this).attr("fill", fill);
           });
-/* 
+ 
         $("path").mouseover(function(){                   //panel 區塊跟隨滑鼠移動
           $("path").mousemove( function(e) {
            d3.select(this)
@@ -69,7 +69,7 @@ function drawTaiwan(){
                  .style("opacity", 0);
           });
         });    
-
+/*
     //下面是青恩的
     .on("mouseout", function() {
         $(this).attr("fill", fill);
